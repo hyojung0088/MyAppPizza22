@@ -15,7 +15,7 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/profile_image"
+            android:id="@+id/store_logo_image"
             android:layout_width="96dp"
             android:layout_height="96dp"
             android:src="@mipmap/ic_launcher"
@@ -62,15 +62,15 @@
 
                 </LinearLayout>
             </LinearLayout>
-        <ImageView
-            android:id="@+id/ImageView02"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/ic_launcher"
-            android:maxHeight="25dp"
-            android:maxWidth="25dp"
-            android:layout_gravity="right" >
-        </ImageView>
+
+            <ImageView
+                android:id="@+id/detailImageView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="right"
+                android:minWidth="25dp"
+                android:minHeight="25dp"
+                android:src="@drawable/right_img"></ImageView>
 
         </FrameLayout>
 
