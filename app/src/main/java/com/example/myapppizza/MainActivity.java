@@ -1,8 +1,9 @@
 package com.example.myapppizza;
 
+import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
+import com.example.myapppizza.Adapter.PizzaListAdapter;
 import com.example.myapppizza.databinding.ActivityMainBinding;
 
 import java.util.ArrayList;
@@ -14,10 +15,20 @@ public class MainActivity extends BaseActivity {
 
     List<PizzaListItem> plist = new ArrayList<PizzaListItem>();
 
+    PizzaListAdapter mAppadapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+        setupEvents();
+        setValues();
+        bindViews();
+
+        act = DataBindingUtil.setContentView(this,R.layout.activity_main);
+        mAppadapter = new PizzaListAdapter(MainActivity.this, plist);
+
+        act.orderListView.setAdapter(mAppadapter);
 
         GetpizzaList();
     }

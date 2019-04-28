@@ -22,6 +22,7 @@
                 android:textSize="30sp"/>
 
             <ListView
+                android:id="@+id/orderListView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"></ListView>
         </LinearLayout>
